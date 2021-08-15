@@ -1,5 +1,22 @@
-// diposit amount
+// disable button
+document.getElementById('diposit').addEventListener('keyup', function(event){
+    if(event.target.value > 0){
+        document.getElementById('diposit-button').removeAttribute('disabled');
+    }
+    else{
+        document.getElementById('diposit-button').setAttribute('disabled', true)
+    }
+})
+document.getElementById('withdraw').addEventListener('keyup', function(event){
+    if(event.target.value > 0){
+        document.getElementById('withdraw-button').removeAttribute('disabled');
+    }
+    else{
+        document.getElementById('withdraw-button').setAttribute('disabled', true)
+    }
+})
 
+// diposit amount
 document.getElementById('diposit-button').addEventListener('click',function(){
     const userDiposit = document.getElementById('diposit').value;
     const dipositAmmount = document.getElementById('diposit-amount');
